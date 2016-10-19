@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample app</title>
+
+    <!-- include the web_components polyfills with support for Dart. -->
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+
+    <!-- import the login-user component -->
+    <link rel="import" href="login.html">
+    
+    <link rel="stylesheet" href="chapter_29.css">
+  </head>
+  <body>
+   <h1>Welcome to Polymer and Dart</h1>
+   
+   <login-user></login-user>
+
+    <!-- bootstrap polymer -->
+    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

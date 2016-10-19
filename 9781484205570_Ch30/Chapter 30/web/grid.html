@@ -1,0 +1,67 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="packages/polymer/polymer.html">
+
+<!-- import web components -->
+<link rel="import" href="add.html">
+
+<polymer-element name="show-grid">
+  <template>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <div id="grid_result" style="display:none;" class="alert alert-success">Contact deleted successfully</div>
+    
+    <div id="del_alert" class="alert alert-danger alert-dismissible fade in" role="alert" style="display:none">
+      <button type="button" on-click="{{alert_close}}" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+      <h4>You're going to delete this item</h4>
+      <p>Are you sure you want to delete this item ?</p>
+      <p>
+        <button type="button" on-click="{{alert_accept}}" class="btn btn-danger">Yes, delete it!</button>
+        <button type="button" on-click="{{alert_cancel}}" class="btn btn-default">Nope</button>
+      </p>
+    </div>
+    
+    <template if="{{contacts.keys.length <= 0}}">
+      <h2>No contacts found</h2>
+      <p> User + Add new contact button to create new contacts on your database </p>
+    </template>
+    
+    <template if="{{contacts.keys.length > 0}}">
+    <div class="panel panel-default">
+      <div class="panel-heading">Contacts</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>First Name </th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Zip</th>
+            <th>Country</th>
+            <th>State</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr template repeat="{{k in contacts.keys}}" id="tr_{{k}}">
+            <td>{{k}}</td>
+            <td><a on-click="{{edit}}" id="edi_{{k}}">{{contacts[k]['fname']}}</a></td>
+            <td>{{contacts[k]['lname']}}</td>
+            <td>{{contacts[k]['address']}}</td>
+            <td>{{contacts[k]['phone']}}</td>
+            <td>{{contacts[k]['email']}}</td>
+            <td>{{contacts[k]['zip']}}</td>
+            <td>{{contacts[k]['city']}}</td>
+            <td>{{contacts[k]['country']}}</td>
+            <td><button class="btn btn-primary" id="del_{{k}}" on-click="{{delete}}"><span class="glyphicon glyphicon-trash"></span></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </template>
+    
+  </template>
+  <script type="application/dart" src="grid.dart"></script>
+</polymer-element>
+

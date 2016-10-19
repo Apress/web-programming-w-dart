@@ -1,0 +1,35 @@
+body {
+ background-color: #F8F8F8;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
+ font-weight: normal;
+ line-height: 1.2em;
+ margin: 15px;
+}
+
+.message {
+ background: #cbe0f4 5px 5px;
+ padding: 1em;
+ padding-left: 3.5em;
+ border: 2px solid #96b6d3;
+ color: #286eae;
+ opacity: 0;
+}
+
+.fade-in {
+ opacity: 1;
+ -webkit-transition: opacity 1s ease-in;
+ -moz-transition: opacity 1s ease-in;
+ -o-transition: opacity 1s ease-in;
+ -ms-transition: opacity 1s ease-in;
+ transition: opacity 1s ease-in;
+}
+
+.fade-out {
+ opacity: 0;
+-webkit-transition: opacity 1s ease-out;
+ -moz-transition: opacity 1s ease-out;
+ -o-transition: opacity 1s ease-out;
+ -ms-transition: opacity 1s ease-out;
+ transition: opacity 1s ease-out;
+}

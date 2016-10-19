@@ -1,0 +1,8 @@
+name: chapter_21_contacts
+version: 0.0.1
+author: Moises Belchin and Patricia Juberias
+description: Web Programming with Dart by Moises Belchin and Patricia Juberias
+homepage: http://www.apress.com/9781484205570
+documentation: http://blogdart.es/
+dependencies:
+  sqljocky: any

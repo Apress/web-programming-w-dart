@@ -1,0 +1,89 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="packages/polymer/polymer.html">
+
+<polymer-element name="add-contact">
+  <template>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <template if="{{edit==false}}">
+          <h3>Add new contact</h3><br/>
+          </template>
+          
+          <template if="{{edit==true}}">
+          <h3>Edit contact</h3><br/>
+          </template>
+          
+         <div id="info" class="alert" style="display:none;"></div>
+             
+         <form role="form" action="#">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </div>
+                <input class="form-control" name="fname" id="fname" value="{{fname}}" type="text" placeholder="First Name" required autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </div>
+                <input class="form-control" name="lname" id="lname" value="{{lname}}" type="text" placeholder="Second Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-phone"></span> </div>
+                <input class="form-control" name="phone" id="phone" value="{{phone}}" type="text" placeholder="Phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">@</div>
+                <input class="form-control" name="contact-email" id="email" value="{{email}}" type="email" placeholder="Email">
+              </div>
+            </div>
+             <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span> </div>
+                <input class="form-control" name="address" id="address" value="{{address}}" type="text" placeholder="Address">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> </div>
+                <input class="form-control" name="zip" id="zip" value="{{zip}}" type="text" placeholder="Zip code">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-globe"></span> </div>
+                <input class="form-control" name="city" id="city" value="{{city}}" type="text" placeholder="City">
+              </div>
+            </div>
+             <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-globe"></span> </div>
+                <input class="form-control" name="country" id="country" value="{{country}}" type="text" placeholder="Country">
+              </div>
+            </div>
+             
+             <a type="button" class="btn btn-danger" on-click="{{cancel}}"><span class="glyphicon glyphicon-remove"></span>&nbsp;Cancel</a>
+             <a class="btn btn-success" on-click="{{save}}"><span class="glyphicon glyphicon-ok"></span>&nbsp;Save changes</a>
+          </form>        
+        </div>
+        
+        <template if="{{edit==true}}">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="min-height:500px; border:1px solid #000;">
+          <div id="contact_map" style="height:500px;"></div>
+        </div>
+        </template>
+        
+      </div>
+    </div>
+    
+   </template>
+  <script type="application/dart" src="add.dart"></script>
+</polymer-element>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>My Contacts!</title>
+
+    <!-- include the web_components polyfills with support for Dart. -->
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+
+    <!-- import the web components -->
+    <link rel="import" href="my_contacts.html">
+  </head>
+  <body>
+    <my-contacts></my-contacts>
+
+    <!-- bootstrap polymer -->
+    <script type="application/dart">export 'package:polymer/init.dart';</script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

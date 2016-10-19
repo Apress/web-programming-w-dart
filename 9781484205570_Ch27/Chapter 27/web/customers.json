@@ -1,0 +1,48 @@
+{
+"customers": 
+  [
+     {"id": "0001",
+      "name": "Patricia",
+      "surname": "Juberias",
+      "address": {
+         "street": "Paseo de la castellana",
+         "number": 145,
+         "zip": 28046,
+         "country": "Spain",
+         "state": "Madrid"}
+     },
+    
+    {"id": "0002",
+      "name": "Moises",
+      "surname": "Belchin",
+      "address": {
+         "street": "Pase del prado",
+         "number": 28,
+         "zip": 28014,
+         "country": "Spain",
+         "state": "Madrid"}
+     },
+     
+     {"id": "0003",
+      "name": "Peter",
+      "surname": "Smith",
+      "address": {
+         "street": "Cyphress avenue",
+         "number": 1,
+         "zip": 11217,
+         "country": "EEUU",
+         "state": "Brooklyn"}
+     },
+    
+     {"id": "0004",
+      "name": "Lili",
+      "surname": "Haydn",
+      "address": {
+         "street": "BOYLSTON ST",
+         "number": 195,
+         "zip": 98102,
+         "country": "EEUU",
+         "state": "Seattle"}
+     }
+  ]
+}

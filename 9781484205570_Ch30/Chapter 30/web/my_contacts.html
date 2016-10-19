@@ -1,0 +1,44 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="packages/polymer/polymer.html">
+
+<!-- import web components -->
+<link rel="import" href="grid.html">
+<link rel="import" href="add.html">
+
+<polymer-element name="my-contacts">
+  <template>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <div class="container"><br/>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="page-header">
+        <h1>My contacts</h1>
+      </div>
+    </div>
+    
+    <div class="container">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" on-keyup="{{handle_search_input}}" value="{{search_term}}">
+        </div>
+        <button class="btn btn-default" on-click="{{search}}">Submit</button>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a on-click="{{add}}"><span class="glyphicon glyphicon-plus"></span> Add new contact</a></li>
+        <li><a on-click="{{list}}"><span class="glyphicon glyphicon-th-list"></span> </a></li>       
+      </ul>
+    </div>
+    <div id="info_results"></div>
+    <div id="data_results"></div>
+    <div id="data_form"></div>
+    </div>
+  </template>
+  <script type="application/dart" src="my_contacts.dart"></script>
+</polymer-element>
+

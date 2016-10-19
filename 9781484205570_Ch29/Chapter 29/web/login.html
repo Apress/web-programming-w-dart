@@ -1,0 +1,37 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="packages/polymer/polymer.html">
+  
+<polymer-element name="login-user">
+  <template>
+    <!-- import the login-user css styles -->
+    <link rel="stylesheet" href="login.css">
+    
+    <div id="login">
+     <h1><strong>Welcome.</strong> <span>Log in with your username and password</span></h1>
+      
+      <template if="{{error == true}}">
+       <div id="login_msg">{{login_error}}</div>
+      </template>
+      
+      <fieldset>
+       <p><input type="text" required id="user" name="user" placeholder="User"></p> 
+       <p><input type="password" required id="password" name="password" placeHolder="Password"></p>
+       <p><a href="#" on-click="{{rememberPassword}}"> Forgot your password?</a></p>
+       <p><button on-click="{{login}}">Log in</button></p>
+      </fieldset>
+   
+     <p><span class="btn-round">or</span></p>
+     <p>
+      <a class="facebook-before"><span class="fontawesome-facebook"></span></a>
+      <button class="facebook" on-click="{{facebookLogin}}">Log In with Facebook</button>
+     </p>
+     
+     <p>
+      <a class="twitter-before"><span class="fontawesome-twitter"></span></a>
+      <button class="twitter" on-click="{{twitterLogin}}">Log In with Twitter</button>
+     </p>
+    </div>
+ </template>
+ <script type="application/dart" src="login.dart"></script>
+</polymer-element>
+
